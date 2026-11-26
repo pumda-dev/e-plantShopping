@@ -10,7 +10,6 @@ function ProductList({ onHomeClick }) {
     const [showCart, setShowCart] = useState(false);
     const [addedToCart, setAddedToCart] = useState({});
 
-    // FIXED: Select the items array instead of the cart object
     const CartItems = useSelector((state) =>
         Array.isArray(state.cart?.items) ? state.cart.items : []
     );
